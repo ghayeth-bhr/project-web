@@ -7,24 +7,16 @@
   <title>Tourly</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body id="top">
-  <!-- 
-    - #HEADER
-  -->
+<body >
+
   <header class="header" data-header>
-   
-    <div class="header-top">
+    <div class="header-bottom">
       <div class="container">
         <a href="#" class="logo">
           <img src="./assets/images/logo.svg" alt="Tourly logo">
         </a>
-      </div>
-    </div>
-    <div class="header-bottom">
-      <div class="container">
-        
         <nav class="navbar" data-navbar>
-          <ul class="navbar-list">
+          <ol class="navbar-list">
             <li>
               <a href="index.html" class="navbar-link" data-nav-link>home</a>
             </li>
@@ -39,24 +31,19 @@
             <li>
               <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
             </li>
-          </ul>
+          </ol>
         </nav>
         <button class="btn btn-primary">Book Now</button>
       </div>
     </div>
   </header>
-  <!-- 
-    - #MAIN
-  -->
-  <main>
-    
+
+  <main> 
     <article>
-      <!-- 
-        - #HERO
-      -->
+   
       <section class="hero" id="home">
         <div class="container">
-          <audio src="assets/audios/Welcome to Tourly di.mp3"  autoplay  controls style="margin-bottom: 20px;"></audio>
+          <audio src="assets/audios/Welcome to Tourly di.mp3"  autoplay controls   style="margin-bottom: 20px;"></audio>
           <h2 class="h1 hero-title">Journey to explore world</h2>
           <p class="hero-text">
             “Take a few minutes of every day to fantasize about how you would wander, travel, 
@@ -68,9 +55,7 @@
           </div>
         </div>
       </section>
-      <!-- 
-        - #POPULAR
-      -->
+   
       <section class="popular" id="destination">
         <div class="container">
           <p class="section-subtitle">Uncover place</p>
@@ -142,9 +127,7 @@
           <button class="btn btn-primary" id="moreDestinationsBtn">More destintion</button>
         </div>
       </section>
-      <!-- 
-        - #GALLERY
-      -->
+    
       <section class="gallery" id="gallery">
         <div class="container">
           <p class="section-subtitle">Photo Gallery</p>
@@ -194,9 +177,7 @@
       </section>
     </article>
   </main>
-  <!-- 
-    - #FOOTER
-  -->
+
   <footer class="footer">
     <div class="footer-top">
       <div class="container">
@@ -205,9 +186,7 @@
             <img src="./assets/images/logo.svg" alt="Tourly logo">
           </a>
           <p class="footer-text">
-            Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia
-            at
-            perferendis, pretium, aenean aut ultrices.
+            “Take a few minutes of every day to fantasize about how you would wander, travel, or explore if you could.”
           </p>
         </div>
         <div class="footer-contact">
@@ -241,47 +220,32 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">
-          &copy; 2024 <a href="">codebyghayeth</a>. All rights reserved
-        </p>
-        <ul class="footer-bottom-list">
-          <li>
-            <a href="#" class="footer-bottom-link">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="footer-bottom-link">Term & Condition</a>
-          </li>
-          <li>
-            <a href="#" class="footer-bottom-link">FAQ</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+   
   </footer>
-  <script>
 
-    alert("Bienvenue sur mon site !");
+  <script>
+      alert("Bienvenue sur mon site !");
+
+    
+
 
     function confirmRedirect(page) {
         let result = confirm("Êtes-vous sûr de vouloir visiter " + page + " ?");
         if (result) {
-            // Si l'utilisateur clique sur "OK", redirige vers la page
+            
             window.location.href = page;
         }
-        // Si l'utilisateur clique sur "Annuler", la fonction retourne false pour empêcher la redirection
+        
         return false;
     }
-    // Fonction pour ajouter de nouveaux éléments à la liste
   function addMoreDestinations() {
     const destinations = [
       {
         href: "spain.html",
         imgSrc: "./assets/images/popular-4.jpg",
-        alt: "Madrid, Spain",
-        title: "Madrid",
-        description: "Discover the vibrant culture of Spain's capital."
+        alt: "Barcelone, Spain",
+        title: "Barcelone",
+        description: "Discover the vibrant culture of Spain's catalan."
       },
       {
         href: "paris.html",
@@ -289,12 +253,17 @@
         alt: "Eiffel Tower, Paris",
         title: "Paris",
         description: "Explore the city of love and its landmarks."
+      },{
+        href: "sidiBousaid.html",
+        imgSrc: "./assets/images/popular-6.jpg",
+        alt: "Sidi Bou Said, Tunis",
+        title: "Tunis", 
+        description: "Explore the city of love and its landmarks."
       }
     ];
 
     const ul = document.getElementById("popularList");
 
-    // Boucle pour ajouter chaque destination
     destinations.forEach(destination => {
       const li = document.createElement("li");
       li.innerHTML = `
@@ -315,14 +284,14 @@
           </div>
         </div>
       `;
-      ul.appendChild(li); // Ajoute le nouvel élément à la liste
+      ul.appendChild(li); 
     });
   }
 
-  // Ajoute un écouteur d'événement au bouton "More destinations"
   document.getElementById("moreDestinationsBtn").addEventListener("click", addMoreDestinations);
 
 
   </script>
+
 </body>
 </html>
